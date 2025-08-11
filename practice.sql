@@ -178,7 +178,7 @@ ORDER BY sum(od.quantity * od.unit_price) desc LIMIT 10
 
 
 
-SELECT p.product_name, COUNT(*) as sale_number
+SELECT p.product_name COUNT(*) as sale_number
 
 FROM order_details od LEFT JOIN orders o  on o.order_id = od.order_id
                       LEFT JOIN products p on od.product_id = p.product_id
